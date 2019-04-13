@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.7.2",
-    "copyfiles": "^2.1.0"
+    "copyfiles": "^2.1.0",
+    "font-mfizz": "^2.4.1"
   }
 }

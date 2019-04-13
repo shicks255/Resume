@@ -8,6 +8,7 @@
 
     <link rel="shortcut icon" type="image/png" href="icons/ShicksLogo.png">
     <link type="text/css" rel="stylesheet" href="node_modules/bulma/css/bulma.min.css"/>
+    <link type="text/css" rel="stylesheet" href="node_modules/font-mfizz/dist/font-mfizz.css"/>
     <!--Font Awesome for icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -24,14 +25,18 @@
             right: 0;
         }
 
-        /*.hoverable:hover {*/
-        /*    position: relative;*/
-        /*    display: block;*/
-        /*    width: 1200px;*/
-        /*    height: auto;*/
-        /*    z-index: 25;*/
-        /*    border: 1px solid black;*/
-        /*}*/
+        i {
+            padding: 0 3px 0 3px;
+            cursor: help;
+        }
+
+        .projectTitle{
+            font-weight: bold;
+        }
+
+        .hoverable {
+            cursor: pointer;
+        }
 
         #modal {
             display: none;
@@ -46,12 +51,7 @@
             height: 45%;
             top: 15%;
             left: 50%;
-            /*margin-top: -12%; !* Negative half of height. *!*/
             margin-left: -35%;
-        }
-
-        #modal-background{
-
         }
 
         #modal-background.active {
@@ -64,6 +64,18 @@
             margin-top: -4000px;
             background-color: grey;
             opacity: 0.5;
+        }
+
+        @media only screen and (max-width: 1087px){
+            #modal.active {
+                display: none;
+            }
+            #modal-background.active{
+                display: none;
+            }
+            .hoverable{
+                cursor: auto;
+            }
         }
 
     </style>
@@ -115,79 +127,173 @@
         </div>
         <div class="columns is-desktop">
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
-                <div class="box">
-                    <a href="http://stevesreviews.net" target="_blank">Steve's Reviews</a>
-                    <p>
-                        -Application using Scala and the Play Framework for leaving reviews on music albums.
-                    </p>
-                    <a href="https://github.com/shicks255/PlayMusicReviews" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <br/>
-                    <img class="hoverable" src="images/stevesReviews.JPG"/>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="http://stevesreviews.net" target="_blank"><span class="projectTitle">Steve's Reviews</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                Application using Scala and the Play Framework for leaving reviews on music albums.
+                            </p>
+                            <img class="hoverable" src="images/stevesReviews.JPG"/>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="card-footer-item">
+                            Link:&nbsp;&nbsp;
+                            <a href="https://github.com/shicks255/PlayMusicReviews" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        <span class="card-footer-item">
+                            Uses:&nbsp;&nbsp;
+                            <i title="postgreSQL" class="icon-postgres"></i>
+                            <i title="Play Framework" class="icon-playframework"></i>
+                            <i title="Scala" class="icon-scala"></i>
+                        </span>
+                    </footer>
                 </div>
             </div>
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
-                <div class="box">
-                    <a href="http://music.stevenmhicks.com" target="_blank">Steve FM</a>
-                    <p>
-                        -Check out my Last.FM music scrobbling profile.  Built with React using the Last FM API.
-                    </p>
-                    <a href="https://github.com/shicks255/LastFMPageReact" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <br/>
-                    <img class="hoverable" src="images/SteveFM.JPG"/>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="http://music.stevenmhicks.com" target="_blank"><span class="projectTitle">Steve FM</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                Check out my Last.FM music scrobbling profile.  Built with React using the Last FM API.
+                            </p>
+                            <img class="hoverable" src="images/SteveFM.JPG"/>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="card-footer-item">
+                            Link:&nbsp;&nbsp;
+                            <a href="https://github.com/shicks255/LastFMPageReact" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        <span class="card-footer-item">
+                            Uses:&nbsp;&nbsp;
+                            <i title="javascript" class="fab fa-js-square"></i>
+                            <i title="React" class="fab fa-react"></i>
+                        </span>
+                    </footer>
                 </div>
             </div>
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
-                <div class="box">
-                    <a href="http://www.stevenmhicks.com" target="_blank">My Original Website</a>
-                    <p>
-                        My first resume website.  A playground for trying out various java related technologies and
-                        javascript libraries.  Also a dummy web store to purchase albums.
-                    </p>
-                    <a href="https://github.com/shicks255/resumeSite" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <br/>
-                    <img class="hoverable" src="images/oldSite.JPG"/>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="http://www.stevenmhicks.com" target="_blank"><span class="projectTitle">My Original Website</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                My first resume website.  A playground for trying out various java related technologies and
+                                javascript libraries.  Also a dummy web store to purchase albums.
+                            </p>
+                            <img class="hoverable" src="images/oldSite.JPG"/>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="card-footer-item">
+                            Link:&nbsp;&nbsp;
+                            <a href="https://github.com/shicks255/resumeSite" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        <span class="card-footer-item">
+                            Uses:&nbsp;&nbsp;
+                            <i title="java" class="fab fa-java"></i>
+                            <i title="javascript" class="fab fa-js-square"></i>
+                            <i title="MySql" class="icon-mysql"></i>
+                            <i title="Tomcat" class="icon-tomcat"></i>
+                            <i title="JQuery" class="icon-jquery"></i>
+                        </span>
+                    </footer>
                 </div>
             </div>
         </div>
+
         <div class="columns is-desktop">
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
-                <div class="box">
-                    <a href="#" target="_blank">Education</a>
-                    <p>
-                        -An application related to my education experience including classes taken and coursework.  Built with React calling Springboot microservice.
-                    </p>
-                    <a href="https://github.com/shicks255/" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="http://www.codewars.stevenmhicks.com" target="_blank"><span class="projectTitle">CodeWars</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                A page demoing CodeWars.com problems and solutions.  Built with React.
+                            </p>
+                            <img class="hoverable" src="images/codeWars.JPG"/>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                    <span class="card-footer-item">
+                        Link:&nbsp;&nbsp;
+                        <a href="https://github.com/shicks255/CodeWars_JS_React" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </span>
+                        <span class="card-footer-item">
+                        Uses: &nbsp;&nbsp;
+                        <i title="javascript" class="fab fa-js-square"></i>
+                        <i title="React" class="fab fa-react"></i>
+                    </span>
+                    </footer>
                 </div>
             </div>
+
+            <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="#" target="_blank"><span class="projectTitle">Education</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                An application related to my education experience including classes taken and coursework.  Built with React calling Springboot microservice.
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="card-footer-item">
+                            Link:&nbsp;&nbsp;
+                            <a href="https://github.com/shicks255/" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        <span class="card-footer-item">
+                            Uses:&nbsp;&nbsp;
+                            <i title="java" class="fab fa-java"></i>
+                            <i title="Spring Boot" class="icon-spring"></i>
+                        </span>
+                    </footer>
+                </div>
+            </div>
+
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
                 <div class="box">
-                    <a href="#" target="_blank">Photography</a>
+                    <a href="#" target="_blank"><span class="projectTitle">Photography</span></a>
                     <p>
                         -Coming soon
                     </p>
                     <a href="https://github.com/shicks255/" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                </div>
-            </div>
-            <div class="column is-one-third-desktop is-full-tablet" style="text-align: center;">
-                <div class="box">
-                    <a href="http://www.codewars.stevenmhicks.com" target="_blank">CodeWars</a>
-                    <p>
-                        -A page demoing CodeWars.com problems and solutions.  Built with React.
-                    </p>
-                    <a href="https://github.com/shicks255/CodeWars_JS_React" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <img class="hoverable" src="images/codeWars.JPG"/>
                 </div>
             </div>
         </div>
@@ -201,53 +307,151 @@
         </div>
     </div>
 
-    <div class="tile is-ancestor">
-        <div class="tile">
-            <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
-                <i class="fab fa-github"></i>
-                Music File Renamer
-            </a>
-            Python script to Rename music files in formated of Track# - TrackTitle
-            For example, 02 - Start Me Up.mp3
-            It uses the metatags for this.  They must be present.  Use Mp3Tag program if need be.
-            It will automatically pad numbers less than 10 with a leading 0.
+    <div class="columns is-desktop" style="text-align: center;">
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card" style="text-align: center">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
+                            Music File Renamer
+                            <br/>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        Python script to Rename music files in formated of Track# - TrackTitle
+                        For example, 02 - Start Me Up.mp3
+                        It uses the metatags for this.  They must be present.  Use Mp3Tag program if need be.
+                        It will automatically pad numbers less than 10 with a leading 0.
+                    </div>
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="tile">
-            <a href="https://github.com/shicks255/MetaCriticNewReleases" target="_blank">
-                <i class="fab fa-github"></i>
-                MetaCritic New Album Releases
-            </a>
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/MetaCriticNewReleases" target="_blank">
+                            <i class="fab fa-github"></i>
+                            MetaCritic New Album Releases
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="tile">
-            <a href="https://github.com/shicks255/StupidDealOfTheDay" target="_blank">
-                <i class="fab fa-github"></i>
-                Stupid Deal of the Day
-            </a>
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/StupidDealOfTheDay" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Stupid Deal of the Day
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="tile is-ancestor">
 
-        <div class="tile">
-            <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
-                <i class="fab fa-github"></i>
-                Rename File
-            </a>
+    <div class="columns is-desktop" style="text-align: center;">
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/BingImageOfTheDayDownloader" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Bing Image of the Day Downloader
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="tile">
-            <a href="https://github.com/shicks255/TrimFile" target="_blank">
-                <i class="fab fa-github"></i>
-                Trim File
-            </a>
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Rename File
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="tile">
-            <a href="https://github.com/shicks255/BingImageOfTheDayDownloader" target="_blank">
-                <i class="fab fa-github"></i>
-                Bing Image of the Day Downloader
-            </a>
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/TrimFile" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Trim File
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns is-desktop" style="text-align: center;">
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/SetlistFM_API" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Setlist FM API Wrapper
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-java"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-one-third-desktop is-full-tablet">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-centered">
+                        <a href="https://github.com/shicks255/LastFM_API" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Last FM API Wrapper
+                        </a>
+                    </p>
+                </header>
+                <div class="card-content">
+
+                    <i class="fab fa-java"></i>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -283,19 +487,17 @@
 </body>
 <script>
 
-    let modal = document.getElementById('modal');
-    let modalBackground = document.getElementById('modal-background');
+    const modal = document.getElementById('modal');
+    const modalBackground = document.getElementById('modal-background');
+    const modalImage = document.getElementById('modalImage');
 
     let hoverableImages = document.querySelectorAll('.hoverable');
     hoverableImages.forEach((element, index) => {
         element.addEventListener('click', (e) => {
-            let imageSrc = e.target.src;
+            const imageSrc = e.target.src;
             modal.classList.add('active');
             modalBackground.classList.add('active');
-            let modalImage = document.getElementById('modalImage');
             modalImage.src = imageSrc;
-            console.log(modal);
-            console.log(modalImage);
         });
     });
 
