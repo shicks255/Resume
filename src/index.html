@@ -11,78 +11,12 @@
     <link type="text/css" rel="stylesheet" href="node_modules/font-mfizz/dist/font-mfizz.css"/>
     <!--Font Awesome for icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        footer .content a{
-            padding : 5px;
-        }
-
-        .copyright {
-            position: absolute;
-            boottom: 2em;
-            margin: auto;
-            left: 0;
-            right: 0;
-        }
-
-        i {
-            padding: 0 3px 0 3px;
-            cursor: help;
-        }
-
-        .projectTitle{
-            font-weight: bold;
-        }
-
-        .hoverable {
-            cursor: pointer;
-        }
-
-        #modal {
-            display: none;
-        }
-
-        #modal.active {
-            display: inline-block;
-            z-index: 999;
-            position: fixed;
-            position: fixed;
-            width: 70%;
-            height: 45%;
-            top: 15%;
-            left: 50%;
-            margin-left: -35%;
-        }
-
-        #modal-background.active {
-            z-index: 50;
-            position: absolute;
-            display: inline-block;
-            width: 9000px;
-            height: 9000px;
-            margin-left: -4000px;
-            margin-top: -4000px;
-            background-color: grey;
-            opacity: 0.5;
-        }
-
-        @media only screen and (max-width: 1087px){
-            #modal.active {
-                display: none;
-            }
-            #modal-background.active{
-                display: none;
-            }
-            .hoverable{
-                cursor: auto;
-            }
-        }
-
-    </style>
 
 </head>
 <body>
-<section class="hero is-info is-bold">
+<section class="hero is-bold">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -95,8 +29,8 @@
     </div>
 </section>
 
-<section  class="section">
-    <div class="container is-fluid">
+<div class="container is-fluid">
+    <section  class="section">
         <h3>Skills</h3>
 
         <h3>Tools and Frameworks</h3>
@@ -117,9 +51,10 @@
             <ul>Oracle, MySql, Postgres</ul>
             <ul>React</ul>
         </li>
+    </section>
 
-        <br/>
-
+    <section id="web">
+        <hr/>
         <div class="level is-centered">
             <div class="level-item">
                 <h3 class="subtitle"><b>Web Projects</b></h3>
@@ -297,184 +232,185 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="level is-centered">
-        <div class="level-item">
-            <h2 class="subtitle"><b>Non Web Projects</b></h2>
+    <section class="section" id="nonWeb">
+        <hr/>
+        <div class="level is-centered">
+            <div class="level-item">
+                <h2 class="subtitle"><b>Non Web Projects</b></h2>
+            </div>
         </div>
-    </div>
 
-    <div class="columns is-desktop" style="text-align: center;">
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card" style="text-align: center">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Music File Renamer
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Python script to Rename music files in formated of Track# - TrackTitle
-                        For example, 02 - Start Me Up.mp3
-                        It uses the metatags for this.  They must be present.  Use Mp3Tag program if need be.
-                        It will automatically pad numbers less than 10 with a leading 0.
+        <div class="columns is-desktop" style="text-align: center;">
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card" style="text-align: center">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Music File Renamer
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Python script to Rename music files in formated of Track# - TrackTitle
+                            For example, 02 - Start Me Up.mp3
+                            It uses the metatags for this.  They must be present.  Use Mp3Tag program if need be.
+                            It will automatically pad numbers less than 10 with a leading 0.
+                        </div>
+                        <i class="fab fa-python"></i>
                     </div>
-                    <i class="fab fa-python"></i>
                 </div>
             </div>
-        </div>
 
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/MetaCriticNewReleases" target="_blank">
-                            <i class="fab fa-github"></i>
-                            MetaCritic New Album Releases
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Python script to fetch new music releases from the Meta Critic website.
-                        A text file is populated and checked against on every call to only bring in new info.
-                        A log file is also included.  Need to know the SMTP info of the email to be sending from.
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/MetaCriticNewReleases" target="_blank">
+                                <i class="fab fa-github"></i>
+                                MetaCritic New Album Releases
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Python script to fetch new music releases from the Meta Critic website.
+                            A text file is populated and checked against on every call to only bring in new info.
+                            A log file is also included.  Need to know the SMTP info of the email to be sending from.
+                        </div>
+                        <i class="fab fa-python"></i>
                     </div>
-                <i class="fab fa-python"></i>
                 </div>
             </div>
-        </div>
 
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/StupidDealOfTheDay" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Stupid Deal of the Day
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Python script to fetch the Musician's Friend 'Stupid Deal of the Day', and send a simple
-                        email with the item, old price, and new price, as well as a link.
-                        Need to know the SMTP info of the email to be sending from.
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/StupidDealOfTheDay" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Stupid Deal of the Day
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Python script to fetch the Musician's Friend 'Stupid Deal of the Day', and send a simple
+                            email with the item, old price, and new price, as well as a link.
+                            Need to know the SMTP info of the email to be sending from.
+                        </div>
+                        <i class="fab fa-python"></i>
                     </div>
-                    <i class="fab fa-python"></i>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="columns is-desktop" style="text-align: center;">
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/BingImageOfTheDayDownloader" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Bing Image of the Day Downloader
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Python script to download the Bing.com Image of the Day pictures.
-                        This script relies on selenium, so download the selenium chrome driver to run.
-                        Config file requires the location of the chromedriver, and a location to save the images to.
+        <div class="columns is-desktop" style="text-align: center;">
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/BingImageOfTheDayDownloader" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Bing Image of the Day Downloader
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Python script to download the Bing.com Image of the Day pictures.
+                            This script relies on selenium, so download the selenium chrome driver to run.
+                            Config file requires the location of the chromedriver, and a location to save the images to.
+                        </div>
+                        <i class="fab fa-python"></i>
                     </div>
-                    <i class="fab fa-python"></i>
                 </div>
             </div>
-        </div>
 
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Rename File
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Rename File
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
 
-                    <i class="fab fa-python"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/TrimFile" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Trim File
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-
-                    <i class="fab fa-python"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="columns is-desktop" style="text-align: center;">
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/SetlistFM_API" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Setlist FM API Wrapper
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Setlist.fm data Java API wrapper.  Used to query artists, venues, cities, and just about
-                        any data available on the website.
+                        <i class="fab fa-python"></i>
                     </div>
-                    <i class="fab fa-java"></i>
                 </div>
             </div>
-        </div>
 
-        <div class="column is-one-third-desktop is-full-tablet">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-centered">
-                        <a href="https://github.com/shicks255/LastFM_API" target="_blank">
-                            <i class="fab fa-github"></i>
-                            Last FM API Wrapper
-                        </a>
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Last.fm data Java API wrapper.  Very lightweight, only used for searching for
-                        Artists and searching for Albums.
-                        Can search on a few different fields, like album name, artist name, mbid(music brainz id), limit to return and page number.
-                        The artist and album class each have nested classes for various items about them, for example, images, tracks, bio, etc.
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/TrimFile" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Trim File
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+
+                        <i class="fab fa-python"></i>
                     </div>
-                    <i class="fab fa-java"></i>
                 </div>
             </div>
         </div>
-    </div>
 
-</section>
+        <div class="columns is-desktop" style="text-align: center;">
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/SetlistFM_API" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Setlist FM API Wrapper
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Setlist.fm data Java API wrapper.  Used to query artists, venues, cities, and just about
+                            any data available on the website.
+                        </div>
+                        <i class="fab fa-java"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-one-third-desktop is-full-tablet">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="https://github.com/shicks255/LastFM_API" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Last FM API Wrapper
+                            </a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            Last.fm data Java API wrapper.  Very lightweight, only used for searching for
+                            Artists and searching for Albums.
+                            Can search on a few different fields, like album name, artist name, mbid(music brainz id), limit to return and page number.
+                            The artist and album class each have nested classes for various items about them, for example, images, tracks, bio, etc.
+                        </div>
+                        <i class="fab fa-java"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
 
 <div id="modal">
     <div id="modal-content">

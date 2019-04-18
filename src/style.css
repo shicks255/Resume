@@ -1,0 +1,94 @@
+footer .content a{
+    padding : 5px;
+}
+
+.copyright {
+    position: absolute;
+    boottom: 2em;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+body {
+    background-color: #f2f1ef;
+}
+
+.hero-body {
+    background-color: #076293;
+}
+
+.hero .title, .hero .subtitle {
+    color: white;
+}
+
+hr {
+    background-color: black;
+}
+
+i {
+    padding: 0 3px 0 3px;
+    cursor: help;
+}
+
+.projectTitle{
+    font-weight: bold;
+}
+
+#web header, #web footer {
+    background-color: #f4eede;
+}
+#web .card-content {
+    background-color: #d5dfef;
+}
+
+#nonWeb header {
+    background-color: #d5dfef;
+}
+#nonWeb .card-content {
+    background-color: #f4eede;
+}
+
+.hoverable {
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+}
+
+#modal.active {
+    display: inline-block;
+    z-index: 999;
+    position: fixed;
+    position: fixed;
+    width: 70%;
+    height: 45%;
+    top: 15%;
+    left: 50%;
+    margin-left: -35%;
+}
+
+#modal-background.active {
+    z-index: 50;
+    position: absolute;
+    display: inline-block;
+    width: 9000px;
+    height: 9000px;
+    margin-left: -4000px;
+    margin-top: -4000px;
+    background-color: grey;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 1087px){
+    #modal.active {
+        display: none;
+    }
+    #modal-background.active{
+        display: none;
+    }
+    .hoverable{
+        cursor: auto;
+    }
+}
