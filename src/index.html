@@ -130,7 +130,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://stevesreviews.net" target="_blank"><span class="projectTitle">Steve's Reviews</span></a>
+                            <a href="http://www.stevesreviews.net" target="_blank"><span class="projectTitle">Steve's Reviews</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -161,7 +161,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://music.stevenmhicks.com" target="_blank"><span class="projectTitle">Steve FM</span></a>
+                            <a href="http://www.music.stevenmhicks.com" target="_blank"><span class="projectTitle">Steve FM</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -191,7 +191,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://www.stevenmhicks.com" target="_blank"><span class="projectTitle">My Original Website</span></a>
+                            <a href="http://www.old.stevenmhicks.com" target="_blank"><span class="projectTitle">My Original Website</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -313,9 +313,8 @@
                 <header class="card-header">
                     <p class="card-header-title is-centered">
                         <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
-                            Music File Renamer
-                            <br/>
                             <i class="fab fa-github"></i>
+                            Music File Renamer
                         </a>
                     </p>
                 </header>
@@ -342,8 +341,12 @@
                     </p>
                 </header>
                 <div class="card-content">
-
-                    <i class="fab fa-python"></i>
+                    <div class="content">
+                        Python script to fetch new music releases from the Meta Critic website.
+                        A text file is populated and checked against on every call to only bring in new info.
+                        A log file is also included.  Need to know the SMTP info of the email to be sending from.
+                    </div>
+                <i class="fab fa-python"></i>
                 </div>
             </div>
         </div>
@@ -359,7 +362,11 @@
                     </p>
                 </header>
                 <div class="card-content">
-
+                    <div class="content">
+                        Python script to fetch the Musician's Friend 'Stupid Deal of the Day', and send a simple
+                        email with the item, old price, and new price, as well as a link.
+                        Need to know the SMTP info of the email to be sending from.
+                    </div>
                     <i class="fab fa-python"></i>
                 </div>
             </div>
@@ -378,7 +385,11 @@
                     </p>
                 </header>
                 <div class="card-content">
-
+                    <div class="content">
+                        Python script to download the Bing.com Image of the Day pictures.
+                        This script relies on selenium, so download the selenium chrome driver to run.
+                        Config file requires the location of the chromedriver, and a location to save the images to.
+                    </div>
                     <i class="fab fa-python"></i>
                 </div>
             </div>
@@ -431,7 +442,10 @@
                     </p>
                 </header>
                 <div class="card-content">
-
+                    <div class="content">
+                        Setlist.fm data Java API wrapper.  Used to query artists, venues, cities, and just about
+                        any data available on the website.
+                    </div>
                     <i class="fab fa-java"></i>
                 </div>
             </div>
@@ -448,7 +462,12 @@
                     </p>
                 </header>
                 <div class="card-content">
-
+                    <div class="content">
+                        Last.fm data Java API wrapper.  Very lightweight, only used for searching for
+                        Artists and searching for Albums.
+                        Can search on a few different fields, like album name, artist name, mbid(music brainz id), limit to return and page number.
+                        The artist and album class each have nested classes for various items about them, for example, images, tracks, bio, etc.
+                    </div>
                     <i class="fab fa-java"></i>
                 </div>
             </div>

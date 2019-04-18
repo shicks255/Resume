@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "copyfiles  ./index.html ./icons/* ./node_modules/* \\\\httptomcat\\caddy\\resume\\"
+    "install": "copyfiles  ./index.html ./icons/* ./images/* ./node_modules/* \\\\httptomcat\\caddy\\resume\\"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bulma": "^0.7.2",
+    "bulma": "^0.7.4",
     "copyfiles": "^2.1.0",
     "font-mfizz": "^2.4.1"
   }
