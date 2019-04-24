@@ -1,3 +1,16 @@
+body {
+    background-color: #f2f1ef;
+}
+
+
+.hero-body {
+    background-color: #076293;
+}
+
+.hero .title, .hero .subtitle {
+    color: white;
+}
+
 footer .content a{
     padding : 5px;
 }
@@ -10,20 +23,20 @@ footer .content a{
     right: 0;
 }
 
-body {
-    background-color: #f2f1ef;
+progress {
+    margin: 5px 0px !important;
+    width: 25% !important;
 }
-
-.hero-body {
-    background-color: #076293;
+#pythonProgress::-webkit-progress-value{
+    background: #f4a742 !important;
 }
-
-.hero .title, .hero .subtitle {
-    color: white;
+progress[value]::after {
+    content: attr(value)'%';
 }
 
 hr {
     background-color: black;
+    height: 1.5px;
 }
 
 i {

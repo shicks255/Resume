@@ -31,26 +31,78 @@
 
 <div class="container is-fluid">
     <section  class="section">
-        <h3>Skills</h3>
 
-        <h3>Tools and Frameworks</h3>
-        <li>
-            <ul>Java</ul>
-            <ul>Servlets and JSP</ul>
-            <ul>Apache Tomcat</ul>
-            <ul>Javascript, Jquery</ul>
-            <ul>Intellij IDEA</ul>
-            <ul>Atlassian Products(Jira, BitBucket, Confluence)</ul>
-            <ul>Jenkins</ul>
-            <ul>Fish Eye</ul>
-            <ul>JPA/Hibernate</ul>
-            <ul>Git</ul>
-            <ul>Design Patterns</ul>
-            <ul>Python</ul>
-            <ul>Scala</ul>
-            <ul>Oracle, MySql, Postgres</ul>
-            <ul>React</ul>
-        </li>
+        <h2 class="title">Languages</h2>
+        <div class="section">
+            <span class="tag is-success is-medium">Java</span>
+            <progress id="javaProgress" class="progress is-small is-success" value="0" max="100"></progress>
+            <div class="tags">
+                <span class="tag is-success">Servlets and JSP</span>
+                <span class="tag is-success">Tomcat</span>
+                <span class="tag is-success">Springboot</span>
+                <span class="tag is-success">JPA/Hibernate</span>
+                <span class="tag is-success">Streams & Functional Interfaces/Lambdas</span>
+            </div>
+
+            <span class="tag is-primary is-medium">Scala</span>
+            <progress id="scalaProgress" class="progress is-small is-primary" value="0" max="100"></progress>
+            <div class="tags">
+                <span class="tag is-primary">Play Framework</span>
+            </div>
+
+            <span class="tag is-primary is-medium">Javacsript</span>
+            <progress id="javaScriptProgress" class="progress is-small is-primary" value="0" max="100"></progress>
+            <div class="tags">
+                <span class="tag is-primary">JQuery</span>
+                <span class="tag is-primary">React</span>
+            </div>
+
+            <span class="tag is-medium" style="background-color: #f4a742">Python</span>
+            <progress id="pythonProgress" class="progress is-small" value="0" max="100"></progress>
+            <div class="tags">
+                <span style="background-color: #f4a742" class="tag">Version 3^</span>
+                <span style="background-color: #f4a742" class="tag">Beautiful Soup</span>
+                <span style="background-color: #f4a742" class="tag">Selenium</span>
+            </div>
+        </div>
+
+        <h2 class="title">Tools:</h2>
+        --Intellij IDEA
+        --Git
+        --Postgres, MySql
+
+        <ul>Atlassian Products(Jira, BitBucket, Confluence)</ul>
+        <ul>Jenkins</ul>
+        <ul>Fish Eye</ul>
+        <ul>Design Patterns</ul>
+    </section>
+
+    <section>
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-one-third">
+                <i class="fas fa-map-marker-alt fa-5x"></i>
+                <br/>
+                <br/>
+                LOCATION<br/>
+                <a target="_blank" href="https://www.google.com/maps/place/Somerville,+NJ+08876/@40.5688967,-74.6238795,14z/data=!3m1!4b1!4m5!3m4!1s0x89c3938629b91175:0xffa2db0bcb89d3d0!8m2!3d40.5742693!4d-74.6098816">Bridgewater, NJ</a>
+            </div>
+
+            <div class="column is-one-third">
+                <i class="fas fa-file-alt fa-5x"></i>
+                <br/>
+                <br/>
+                RESUME<br/>
+                <a download="" target="_blank" href="StevenHicksResume_new.pdf">Steven Hicks</a>
+            </div>
+
+            <div class="column is-one-third">
+                <i class="fas fa-at fa-5x"></i>
+                <br/>
+                <br/>
+                EMAIL<br/>
+                <a href="mailto:shicks255@yahoo.com">shicks255&commat;yahoo.com</a>
+            </div>
+        </div>
     </section>
 
     <section id="web">
@@ -460,6 +512,38 @@
         modalBackground.classList.remove('active');
         modal.classList.remove('active');
     });
+
+
+    let timeout = 7;
+    const javaProgress = document.getElementById('javaProgress');
+    const scalaProgress = document.getElementById('scalaProgress');
+    const javaScriptProgress = document.getElementById('javaScriptProgress');
+    const pythonProgress = document.getElementById('pythonProgress');
+
+    for (let i = 0; i <= 95; i++) {
+        setTimeout(() => {
+            javaProgress.setAttribute('value', i);
+        }, timeout * i);
+    }
+
+    for (let i = 0; i <= 75; i++) {
+        setTimeout(() => {
+            scalaProgress.setAttribute('value', i);
+        }, timeout * i);
+    }
+
+    for (let i = 0; i <= 65; i++) {
+        setTimeout(() => {
+            javaScriptProgress.setAttribute('value', i);
+        }, timeout * i);
+    }
+
+    for (let i = 0; i <= 55; i++) {
+        setTimeout(() => {
+            pythonProgress.setAttribute('value', i);
+        }, timeout * i);
+    }
+
 
 </script>
 
