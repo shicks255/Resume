@@ -29,8 +29,8 @@
     </div>
 </section>
 
-<div class="container is-fluid">
-    <section  class="section">
+<section id="languages" class="section">
+    <div class="container is-fluid">
 
         <h2 class="title">Languages</h2>
         <div class="section">
@@ -44,25 +44,25 @@
                 <span class="tag is-success has-text-black">Streams & Functional Interfaces/Lambdas</span>
             </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #a9d307;">Scala</span>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307;">Scala</span>
             <progress id="scalaProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
-                <span style="background-color: #a9d307;" class="tag">Play Framework</span>
+                <span style="background-color: #a9d307;" class="tag has-text-black">Play Framework</span>
             </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #a9d307">Javacsript</span>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307">Javacsript</span>
             <progress id="javaScriptProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
-                <span style="background-color: #a9d307" class="tag">JQuery</span>
-                <span style="background-color: #a9d307" class="tag">React</span>
+                <span style="background-color: #a9d307" class="tag has-text-black">JQuery</span>
+                <span style="background-color: #a9d307" class="tag has-text-black">React</span>
             </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #f4a742">Python</span>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #f4a742">Python</span>
             <progress id="pythonProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
-                <span style="background-color: #f4a742" class="tag">Version 3^</span>
-                <span style="background-color: #f4a742" class="tag">Beautiful Soup</span>
-                <span style="background-color: #f4a742" class="tag">Selenium</span>
+                <span style="background-color: #f4a742" class="tag has-text-black">Version 3^</span>
+                <span style="background-color: #f4a742" class="tag has-text-black">Beautiful Soup</span>
+                <span style="background-color: #f4a742" class="tag has-text-black">Selenium</span>
             </div>
         </div>
 
@@ -75,9 +75,11 @@
             <span class="tag is-dark">Atlassian Products(Jira, BitBucket, Confluence)</span>
             <span class="tag is-dark">Jenkins CDI</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
+<section id="me" class="section">
+    <div class="container is-fluid">
         <div class="columns is-centered has-text-centered">
             <div class="column is-one-third">
                 <i class="fas fa-map-marker-alt fa-5x"></i>
@@ -103,13 +105,14 @@
                 <a href="mailto:shicks255@yahoo.com">shicks255&commat;yahoo.com</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="web">
-        <hr/>
+<section id="web" class="section">
+    <div class="container is-fluid">
         <div class="level is-centered">
             <div class="level-item">
-                <h3 class="subtitle"><b>Web Projects</b></h3>
+                <h3 class="subtitle has-text-white"><b>Web Projects</b></h3>
             </div>
         </div>
         <div class="columns is-desktop">
@@ -273,24 +276,31 @@
             </div>
 
             <div class="column is-one-third-desktop is-full-tablet" style="text-align: center">
-                <div class="box">
-                    <a href="#" target="_blank"><span class="projectTitle">Photography</span></a>
-                    <p>
-                        -Coming soon
-                    </p>
-                    <a href="https://github.com/shicks255/" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title is-centered">
+                            <a href="#"><span class="projectTitle">Photography</span></a>
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <p>
+                                Comming soon
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="card-footer"></footer>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="nonWeb">
-        <hr/>
+<section class="section" id="nonWeb">
+    <div class="container is-fluid">
         <div class="level is-centered">
             <div class="level-item">
-                <h2 class="subtitle"><b>Non Web Projects</b></h2>
+                <h2 class="subtitle has-text-white"><b>Non Web Projects</b></h2>
             </div>
         </div>
 
@@ -460,9 +470,8 @@
                 </div>
             </div>
         </div>
-
-    </section>
-</div>
+    </div>
+</section>
 
 <div id="modal">
     <div id="modal-content">
@@ -487,7 +496,7 @@
         </a>
     </div>
 
-    <div class="copyright has-text-centered">
+    <div class="copyright has-text-centered has-text-white">
         &copy;Steven Hicks
     </div>
 </footer>

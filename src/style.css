@@ -9,8 +9,24 @@ body {
     color: white;
 }
 
+/*Different backgrounds for the different sections*/
+section#languages {
+}
+section#me {
+}
+section#web{
+    background-color: #768981;
+}
+section#nonWeb {
+    background-color: #582035;
+}
+
+.footer {
+    background-color: #076293 !important;
+}
 footer .content a{
     padding : 5px;
+    color: white;
 }
 
 .copyright {
@@ -56,17 +72,17 @@ i {
 
 /*Stuff for web projects*/
 #web header, #web footer {
-    background-color: #f4eede;
+    background-color: #D4D3D1;
 }
 #web .card-content {
-    background-color: #d5dfef;
+    background-color: #f2f1ef;
 }
 /*Stuff for non web projects*/
 #nonWeb header {
-    background-color: #d5dfef;
+    background-color: #D4D3D1;
 }
 #nonWeb .card-content {
-    background-color: #f4eede;
+    background-color: #f2f1ef;
 }
 
 /*All stuff relating to the image modals*/
