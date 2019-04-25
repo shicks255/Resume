@@ -34,30 +34,30 @@
 
         <h2 class="title">Languages</h2>
         <div class="section">
-            <span class="tag is-success is-medium">Java</span>
+            <span class="tag is-success is-medium has-text-black is-uppercase has-text-weight-semibold">Java</span>
             <progress id="javaProgress" class="progress is-small is-success" value="0" max="100"></progress>
             <div class="tags">
-                <span class="tag is-success">Servlets and JSP</span>
-                <span class="tag is-success">Tomcat</span>
-                <span class="tag is-success">Springboot</span>
-                <span class="tag is-success">JPA/Hibernate</span>
-                <span class="tag is-success">Streams & Functional Interfaces/Lambdas</span>
+                <span class="tag is-success has-text-black">Servlets and JSP</span>
+                <span class="tag is-success has-text-black">Tomcat</span>
+                <span class="tag is-success has-text-black">Springboot</span>
+                <span class="tag is-success has-text-black">JPA/Hibernate</span>
+                <span class="tag is-success has-text-black">Streams & Functional Interfaces/Lambdas</span>
             </div>
 
-            <span class="tag is-primary is-medium">Scala</span>
-            <progress id="scalaProgress" class="progress is-small is-primary" value="0" max="100"></progress>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #a9d307;">Scala</span>
+            <progress id="scalaProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
-                <span class="tag is-primary">Play Framework</span>
+                <span style="background-color: #a9d307;" class="tag">Play Framework</span>
             </div>
 
-            <span class="tag is-primary is-medium">Javacsript</span>
-            <progress id="javaScriptProgress" class="progress is-small is-primary" value="0" max="100"></progress>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #a9d307">Javacsript</span>
+            <progress id="javaScriptProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
-                <span class="tag is-primary">JQuery</span>
-                <span class="tag is-primary">React</span>
+                <span style="background-color: #a9d307" class="tag">JQuery</span>
+                <span style="background-color: #a9d307" class="tag">React</span>
             </div>
 
-            <span class="tag is-medium" style="background-color: #f4a742">Python</span>
+            <span class="tag is-medium is-uppercase has-text-weight-semibold" style="background-color: #f4a742">Python</span>
             <progress id="pythonProgress" class="progress is-small" value="0" max="100"></progress>
             <div class="tags">
                 <span style="background-color: #f4a742" class="tag">Version 3^</span>
@@ -66,15 +66,15 @@
             </div>
         </div>
 
-        <h2 class="title">Tools:</h2>
-        --Intellij IDEA
-        --Git
-        --Postgres, MySql
-
-        <ul>Atlassian Products(Jira, BitBucket, Confluence)</ul>
-        <ul>Jenkins</ul>
-        <ul>Fish Eye</ul>
-        <ul>Design Patterns</ul>
+        <h2 class="title">Tools</h2>
+        <div class="tags">
+            <span class="tag is-dark">Intellij IDEA</span>
+            <span class="tag is-dark">Git</span>
+            <span class="tag is-dark">Postgres</span>
+            <span class="tag is-dark">MySql</span>
+            <span class="tag is-dark">Atlassian Products(Jira, BitBucket, Confluence)</span>
+            <span class="tag is-dark">Jenkins CDI</span>
+        </div>
     </section>
 
     <section>
@@ -92,7 +92,7 @@
                 <br/>
                 <br/>
                 RESUME<br/>
-                <a download="" target="_blank" href="StevenHicksResume_new.pdf">Steven Hicks</a>
+                <a download="" target="_blank" href="resume.pdf">Steven Hicks</a>
             </div>
 
             <div class="column is-one-third">
@@ -513,36 +513,37 @@
         modal.classList.remove('active');
     });
 
+    setTimeout(() => {
+        let timeout = 7;
+        const javaProgress = document.getElementById('javaProgress');
+        const scalaProgress = document.getElementById('scalaProgress');
+        const javaScriptProgress = document.getElementById('javaScriptProgress');
+        const pythonProgress = document.getElementById('pythonProgress');
 
-    let timeout = 7;
-    const javaProgress = document.getElementById('javaProgress');
-    const scalaProgress = document.getElementById('scalaProgress');
-    const javaScriptProgress = document.getElementById('javaScriptProgress');
-    const pythonProgress = document.getElementById('pythonProgress');
+        for (let i = 0; i <= 95; i++) {
+            setTimeout(() => {
+                javaProgress.setAttribute('value', i);
+            }, timeout * i);
+        }
 
-    for (let i = 0; i <= 95; i++) {
-        setTimeout(() => {
-            javaProgress.setAttribute('value', i);
-        }, timeout * i);
-    }
+        for (let i = 0; i <= 75; i++) {
+            setTimeout(() => {
+                scalaProgress.setAttribute('value', i);
+            }, timeout * i);
+        }
 
-    for (let i = 0; i <= 75; i++) {
-        setTimeout(() => {
-            scalaProgress.setAttribute('value', i);
-        }, timeout * i);
-    }
+        for (let i = 0; i <= 65; i++) {
+            setTimeout(() => {
+                javaScriptProgress.setAttribute('value', i);
+            }, timeout * i);
+        }
 
-    for (let i = 0; i <= 65; i++) {
-        setTimeout(() => {
-            javaScriptProgress.setAttribute('value', i);
-        }, timeout * i);
-    }
-
-    for (let i = 0; i <= 55; i++) {
-        setTimeout(() => {
-            pythonProgress.setAttribute('value', i);
-        }, timeout * i);
-    }
+        for (let i = 0; i <= 55; i++) {
+            setTimeout(() => {
+                pythonProgress.setAttribute('value', i);
+            }, timeout * i);
+        }
+    },500);
 
 
 </script>

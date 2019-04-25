@@ -30,6 +30,12 @@ progress {
 #pythonProgress::-webkit-progress-value{
     background: #f4a742 !important;
 }
+#scalaProgress::-webkit-progress-value{
+    background: #a9d307 !important;
+}
+#javaScriptProgress::-webkit-progress-value{
+    background: #a9d307 !important;
+}
 progress[value]::after {
     content: attr(value)'%';
 }
@@ -101,5 +107,8 @@ i {
     }
     .hoverable{
         cursor: auto;
+    }
+    progress {
+        width: 75% !important;
     }
 }
