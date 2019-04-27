@@ -37,6 +37,11 @@ footer .content a{
     right: 0;
 }
 
+ul {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
 /*Stuff for progress bars*/
 progress {
     margin: 5px 0px !important;
