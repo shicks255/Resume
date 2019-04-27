@@ -15,7 +15,7 @@ section#languages {
 section#me {
 }
 section#web{
-    background-color: #768981;
+    background-color: #8b8d80;
 }
 section#nonWeb {
     background-color: #582035;
@@ -40,7 +40,7 @@ footer .content a{
 /*Stuff for progress bars*/
 progress {
     margin: 5px 0px !important;
-    width: 25% !important;
+    width: 75% !important;
 }
 /*needed to customize color of python stuff*/
 #pythonProgress::-webkit-progress-value{
@@ -61,7 +61,7 @@ hr {
     height: 1.5px;
 }
 
-i {
+.card-footer-item:nth-child(2) i{
     padding: 0 3px 0 3px;
     cursor: help;
 }

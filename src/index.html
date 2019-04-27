@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-
 </head>
 <body>
 <section class="hero is-bold">
@@ -32,37 +31,49 @@
 <section id="languages" class="section">
     <div class="container is-fluid">
 
-        <h2 class="title has-text-centered">Languages</h2>
-        <div class="section">
-            <span class="tag is-success is-medium has-text-black is-uppercase has-text-weight-semibold">Java</span>
-            <progress id="javaProgress" class="progress is-small is-success" value="0" max="100"></progress>
-            <div class="tags">
-                <span class="tag is-success has-text-black">Servlets and JSP</span>
-                <span class="tag is-success has-text-black">Tomcat</span>
-                <span class="tag is-success has-text-black">Springboot</span>
-                <span class="tag is-success has-text-black">JPA/Hibernate</span>
-                <span class="tag is-success has-text-black">Streams & Functional Interfaces/Lambdas</span>
+        <div class="columns">
+            <div class="column is-half">
+                <h2 class="title has-text-centered">Yo</h2>
+                <div class="section">
+                    <div class="box">
+                        I am a hard working
+                    </div>
+                </div>
             </div>
+            <div class="column is-half">
+                <h2 class="title has-text-centered">Languages</h2>
+                <div class="section">
+                    <span class="tag is-success is-medium has-text-black is-uppercase has-text-weight-semibold">Java</span>
+                    <progress id="javaProgress" class="progress is-small is-success" value="0" max="100"></progress>
+                    <div class="tags">
+                        <span class="tag is-success has-text-black">Servlets and JSP</span>
+                        <span class="tag is-success has-text-black">Tomcat</span>
+                        <span class="tag is-success has-text-black">Springboot</span>
+                        <span class="tag is-success has-text-black">JPA/Hibernate</span>
+                        <span class="tag is-success has-text-black">Streams & Functional Interfaces/Lambdas</span>
+                    </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307;">Scala</span>
-            <progress id="scalaProgress" class="progress is-small" value="0" max="100"></progress>
-            <div class="tags">
-                <span style="background-color: #a9d307;" class="tag has-text-black">Play Framework</span>
-            </div>
+                    <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307;">Scala</span>
+                    <progress id="scalaProgress" class="progress is-small" value="0" max="100"></progress>
+                    <div class="tags">
+                        <span style="background-color: #a9d307;" class="tag has-text-black">Play Framework</span>
+                    </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307">Javascript</span>
-            <progress id="javaScriptProgress" class="progress is-small" value="0" max="100"></progress>
-            <div class="tags">
-                <span style="background-color: #a9d307" class="tag has-text-black">JQuery</span>
-                <span style="background-color: #a9d307" class="tag has-text-black">React</span>
-            </div>
+                    <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307">Javascript</span>
+                    <progress id="javaScriptProgress" class="progress is-small" value="0" max="100"></progress>
+                    <div class="tags">
+                        <span style="background-color: #a9d307" class="tag has-text-black">JQuery</span>
+                        <span style="background-color: #a9d307" class="tag has-text-black">React</span>
+                    </div>
 
-            <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #f4a742">Python</span>
-            <progress id="pythonProgress" class="progress is-small" value="0" max="100"></progress>
-            <div class="tags">
-                <span style="background-color: #f4a742" class="tag has-text-black">Version 3^</span>
-                <span style="background-color: #f4a742" class="tag has-text-black">Beautiful Soup</span>
-                <span style="background-color: #f4a742" class="tag has-text-black">Selenium</span>
+                    <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #f4a742">Python</span>
+                    <progress id="pythonProgress" class="progress is-small" value="0" max="100"></progress>
+                    <div class="tags">
+                        <span style="background-color: #f4a742" class="tag has-text-black">Version 3^</span>
+                        <span style="background-color: #f4a742" class="tag has-text-black">Beautiful Soup</span>
+                        <span style="background-color: #f4a742" class="tag has-text-black">Selenium</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -495,10 +506,11 @@
             <i class="fab fa-youtube"></i>
         </a>
     </div>
-
+    <br/>
     <div class="copyright has-text-centered has-text-white">
         &copy;Steven Hicks
     </div>
+    <br/><br/>
 </footer>
 </body>
 <script>
@@ -529,13 +541,13 @@
         const javaScriptProgress = document.getElementById('javaScriptProgress');
         const pythonProgress = document.getElementById('pythonProgress');
 
-        for (let i = 0; i <= 95; i++) {
+        for (let i = 0; i <= 85; i++) {
             setTimeout(() => {
                 javaProgress.setAttribute('value', i);
             }, timeout * i);
         }
 
-        for (let i = 0; i <= 75; i++) {
+        for (let i = 0; i <= 70; i++) {
             setTimeout(() => {
                 scalaProgress.setAttribute('value', i);
             }, timeout * i);
