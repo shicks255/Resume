@@ -48,6 +48,15 @@
                         <span class="tag is-success has-text-black">Streams & Functional Interfaces/Lambdas</span>
                     </div>
 
+                    <span class="tag is-medium has-text-black is-uppercase has-text-weight-semibold" style="background-color: #a9d307;">
+                        <img src="icons/kotlin.svg" height="12" width="12">
+                        &nbsp;Kotlin
+                    </span>
+                    <progress id="kotlinProgress" class="progress is-small" value="0" max="100"></progress>
+                    <div class="tags">
+                        <span style="background-color: #a9d307;" class="tag has-text-black">ds</span>
+                    </div>
+
                     <span class="tag is-medium is-uppercase has-text-weight-semibold has-text-black" style="background-color: #a9d307;">
                         <i title="Scala" class="icon-scala"></i>
                         Scala
@@ -573,6 +582,7 @@
         const scalaProgress = document.getElementById('scalaProgress');
         const javaScriptProgress = document.getElementById('javaScriptProgress');
         const pythonProgress = document.getElementById('pythonProgress');
+        const kotlinProgress = document.getElementById('kotlinProgress');
 
         for (let i = 0; i <= 85; i++) {
             setTimeout(() => {
@@ -595,6 +605,12 @@
         for (let i = 0; i <= 55; i++) {
             setTimeout(() => {
                 pythonProgress.setAttribute('value', i);
+            }, timeout * i);
+        }
+
+        for (let i = 0; i <= 65; i++) {
+            setTimeout(() => {
+                kotlinProgress.setAttribute('value', i);
             }, timeout * i);
         }
     },500);
