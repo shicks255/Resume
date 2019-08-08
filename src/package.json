@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "copyfiles ./resume.pdf ./index.html ./style.css ./icons/* ./images/* ./node_modules/* \\\\httptomcat\\caddy\\resume\\"
+    "install": "copyfiles ./resume.pdf ./index.html ./style.css ./icons/* ./images/* ./node_modules/* \\\\thinkcentre\\caddy\\resume\\"
   },
   "author": "",
   "license": "ISC",

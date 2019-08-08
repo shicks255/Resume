@@ -49,7 +49,7 @@ progress {
 }
 /*needed to customize color of python stuff*/
 
-#kotlinProgress::-webkit-progress-value {
+#kotlinProgress::-webkit-progress-value{
     background: #a9d307 !important;
 }
 #pythonProgress::-webkit-progress-value{
