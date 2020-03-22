@@ -75,8 +75,13 @@ hr {
     cursor: help;
 }
 
+.card-footer-item > a {
+    color: #0d4db4;
+}
+
 .projectTitle{
     font-weight: bold;
+    color: #0d4db4;
 }
 
 /*Stuff for web projects*/
