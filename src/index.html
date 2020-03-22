@@ -173,7 +173,7 @@
                             <p>
                                 Application using Scala and the Play Framework for leaving reviews on music albums.
                             </p>
-                            <img class="hoverable" src="images/stevesReviews.JPG"/>
+                            <img class="hoverable" src="images/thumbnails/stevesReviews.JPG"/>
                         </div>
                     </div>
                     <footer class="card-footer">
@@ -196,7 +196,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://www.music.stevenmhicks.com" target="_blank"><span class="projectTitle">Steve FM</span></a>
+                            <a href="https://music.shicks255.com" target="_blank"><span class="projectTitle">Steve FM</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -204,7 +204,7 @@
                             <p>
                                 Check out my Last.FM music scrobbling profile.  Built with React using the Last FM API.
                             </p>
-                            <img class="hoverable" src="images/SteveFM.JPG"/>
+                            <img class="hoverable" src="images/thumbnails/SteveFM.JPG"/>
                         </div>
                     </div>
                     <footer class="card-footer">
@@ -226,7 +226,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://www.old.stevenmhicks.com" target="_blank"><span class="projectTitle">My Original Website</span></a>
+                            <a href="http://old.shicks255.com" target="_blank"><span class="projectTitle">My Original Website</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -235,7 +235,7 @@
                                 My first resume website.  A playground for trying out various java related technologies and
                                 javascript libraries.  Also a dummy web store to purchase albums.
                             </p>
-                            <img class="hoverable" src="images/oldSite.JPG"/>
+                            <img class="hoverable" src="images/thumbnails/oldSite.JPG"/>
                         </div>
                     </div>
                     <footer class="card-footer">
@@ -263,7 +263,7 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="http://www.codewars.stevenmhicks.com" target="_blank"><span class="projectTitle">CodeWars</span></a>
+                            <a href="http://codewars.stevenmhicks.com" target="_blank"><span class="projectTitle">CodeWars</span></a>
                         </p>
                     </header>
                     <div class="card-content">
@@ -271,7 +271,7 @@
                             <p>
                                 A page demoing CodeWars.com problems and solutions.  Built with React.
                             </p>
-                            <img class="hoverable" src="images/codeWars.JPG"/>
+                            <img class="hoverable" src="images/thumbnails/codeWars.JPG"/>
                         </div>
                     </div>
                     <footer class="card-footer">
@@ -302,7 +302,7 @@
                             <p>
                                 A react collaboration with my brother for Digital Ocean's 2019 Hacktoberfest.
                                 Search for recipes by keywords.
-                                <img class="hoverable" src="images/recipeBook.JPG" />
+                                <img class="hoverable" src="images/thumbnails/recipeBook.JPG" />
                             </p>
                         </div>
                     </div>
@@ -326,13 +326,14 @@
                 <div class="card">
                     <header class="card-header">
                         <p class="card-header-title is-centered">
-                            <a href="#"><span class="projectTitle">Photography</span></a>
+                            <a href="https://photos.shicks255.com" target="_blank"><span class="projectTitle">Photography</span></a>
                         </p>
                     </header>
                     <div class="card-content">
                         <div class="content">
                             <p>
-                                Comming soon
+                                A Spring Boot and Kotlin backend, React front end app showcases my amateur photography.
+                                <img class="hoverable" src="images/thumbnails/photoSite.PNG"/>
                             </p>
                         </div>
                     </div>
@@ -350,6 +351,11 @@
                             Uses:&nbsp;&nbsp;
                             <i title="javascript" class="fab fa-js-square"></i>
                             <i title="React" class="fab fa-react"></i>
+                            <i title="postgreSQL" class="icon-postgres"></i>
+                            <i title="Spring Boot" class="icon-spring"></i>
+                            <i title="Kotlin">
+                                <img src="icons/kotlin.svg" height="14" width="14" style="opacity: 0.7">
+                            </i>
                         </span>
                     </footer>
                 </div>
@@ -373,7 +379,7 @@
                         <p class="card-header-title is-centered">
                             <a href="https://github.com/shicks255/MusicFileRenamer" target="_blank">
                                 <i class="fab fa-github"></i>
-                                Music File Renamer
+                                Music File Re-namer
                             </a>
                         </p>
                     </header>
@@ -581,7 +587,8 @@
     let hoverableImages = document.querySelectorAll('.hoverable');
     hoverableImages.forEach((element, _) => {
         element.addEventListener('click', (e) => {
-            const imageSrc = e.target.src;
+            const imageSrc = e.target.src.replace("/thumbnails", "")
+            console.log(imageSrc);
             modal.classList.add('active');
             modalBackground.classList.add('active');
             modalImage.src = imageSrc;
