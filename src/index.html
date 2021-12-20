@@ -667,6 +667,7 @@
             modalImage.src = imageSrc;
             window.gtag('event', 'select_content', {
                 event_category: 'image',
+                content_type: 'image',
                 item_id: imageSrc.slice(imageSrc.lastIndexOf('/')+1)
             })
         });
@@ -719,6 +720,7 @@
     function siteClick(item) {
         window.gtag('event', 'select_content', {
             event_category: 'click_site',
+            content_type: 'site_link',
             item_id: item
         });
     }
@@ -726,6 +728,7 @@
     function githubClick(item) {
         window.gtag('event', 'select_content', {
             event_category: 'click_github',
+            content_type: 'github_link',
             item_id: item
         });
     }
@@ -733,6 +736,7 @@
     function linkedSiteClick(item) {
         window.gtag('event', 'select_content', {
             event_category: 'click_link_site',
+            content_type: 'linked_site_link',
             item_id: item
         });
     }
