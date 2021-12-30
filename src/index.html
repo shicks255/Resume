@@ -677,10 +677,8 @@
             modal.classList.add('active');
             modalBackground.classList.add('active');
             modalImage.src = imageSrc;
-            window.gtag('event', 'select_content', {
-                event_category: 'image',
-                content_type: 'image',
-                item_id: imageSrc.slice(imageSrc.lastIndexOf('/')+1)
+            window.gtag('event', 'click_image', {
+                image_url: imageSrc.slice(imageSrc.lastIndexOf('/')+1)
             })
         });
     });
@@ -730,25 +728,19 @@
     },500);
 
     function siteClick(item) {
-        window.gtag('event', 'select_content', {
-            event_category: 'click_site',
-            content_type: 'site_link',
+        window.gtag('event', 'click_site', {
             item_id: item
         });
     }
 
     function githubClick(item) {
-        window.gtag('event', 'select_content', {
-            event_category: 'click_github',
-            content_type: 'github_link',
+        window.gtag('event', 'click_github', {
             item_id: item
         });
     }
 
     function linkedSiteClick(item) {
-        window.gtag('event', 'select_content', {
-            event_category: 'click_link_site',
-            content_type: 'linked_site_link',
+        window.gtag('event', 'click_linked_site', {
             item_id: item
         });
     }
