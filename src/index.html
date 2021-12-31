@@ -678,7 +678,7 @@
             modalBackground.classList.add('active');
             modalImage.src = imageSrc;
             window.gtag('event', 'click_image', {
-                image_url: imageSrc.slice(imageSrc.lastIndexOf('/')+1)
+                item_id: imageSrc.slice(imageSrc.lastIndexOf('/')+1)
             })
         });
     });
